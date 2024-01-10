@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROWN BEAR, BROWN BEAR, WHAT DO YOU SEE?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
+    <style>
+        body {
+            background-color: #fff;
+            font-family: 'Comic Neue', cursive;
+            text-align: center;
+            padding: 20px;
+            color: #8B4513;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-shadow: 2px 2px 4px #333;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        button {
+            width: auto;
+            height: auto;
+            padding: 10px;
+            font-size: 1.2em;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        button img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+        }
+        .gif {
+            width: 50px;
+            height: 50px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        .author-info {
+            margin-top: 30px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <h1>BROWN BEAR, BROWN BEAR, WHAT DO YOU SEE? <img class="gif" src="{{ url_for('static', filename='see.gif') }}" alt="GIF"></h1>
+
+    <div class="button-container">
+        <button onclick="playSound('bearSound'); toggleFullscreen('Page_02.png');">
+            <img src="{{ url_for('static', filename='Page_02.png') }}" alt="Page 2">
+        </button>
+        <button onclick="playSound('birdSound'); toggleFullscreen('Page_03.png');">
+            <img src="{{ url_for('static', filename='Page_03.png') }}" alt="Page 3">
+        </button>
+        <button onclick="playSound('duckSound'); toggleFullscreen('Page_04.png');">
+            <img src="{{ url_for('static', filename='Page_04.png') }}" alt="Page 4">
+        </button>
+        <button onclick="playSound('horseSound'); toggleFullscreen('Page_05.png');">
+            <img src="{{ url_for('static', filename='Page_05.png') }}" alt="Page 5">
+        </button>
+        <button onclick="playSound('frogSound'); toggleFullscreen('Page_06.png');">
+            <img src="{{ url_for('static', filename='Page_06.png') }}" alt="Page 6">
+        </button>
+    </div>
+
+    <div class="button-container">
+        <button onclick="playSound('catSound'); toggleFullscreen('Page_07.png');">
+            <img src="{{ url_for('static', filename='Page_07.png') }}" alt="Page 7">
+        </button>
+        <button onclick="playSound('dogSound'); toggleFullscreen('Page_08.png');">
+            <img src="{{ url_for('static', filename='Page_08.png') }}" alt="Page 8">
+        </button>
+        <button onclick="playSound('sheepSound'); toggleFullscreen('Page_09.png');">
+            <img src="{{ url_for('static', filename='Page_09.png') }}" alt="Page 9">
+        </button>
+        <button onclick="playSound('fishSound'); toggleFullscreen('Page_10.png');">
+            <img src="{{ url_for('static', filename='Page_10.png') }}" alt="Page 10">
+        </button>
+        <button onclick="playSound('teachSound'); toggleFullscreen('Page_11.png');">
+            <img src="{{ url_for('static', filename='Page_11.png') }}" alt="Page 11">
+        </button>
+    </div>
+
+<!-- Audio elements without controls -->
+<audio id="bearSound" src="{{ url_for('static', filename='bear.mp3') }}"></audio>
+<audio id="birdSound" src="{{ url_for('static', filename='bird.mp3') }}"></audio>
+<audio id="duckSound" src="{{ url_for('static', filename='duck.mp3') }}"></audio>
+<audio id="horseSound" src="{{ url_for('static', filename='horse.mp3') }}"></audio>
+<audio id="frogSound" src="{{ url_for('static', filename='frog.mp3') }}"></audio>
+<audio id="catSound" src="{{ url_for('static', filename='cat.mp3') }}"></audio>
+<audio id="dogSound" src="{{ url_for('static', filename='dog.mp3') }}"></audio>
+<audio id="sheepSound" src="{{ url_for('static', filename='sheep.mp3') }}"></audio>
+<audio id="fishSound" src="{{ url_for('static', filename='fish.mp3') }}"></audio>
+<audio id="teachSound" src="{{ url_for('static', filename='teach.mp3') }}"></audio>
+
+
+    <div class="author-info">
+        by Bill Martin Jr. / Pictures by Eric Carle
+    </div>
+
+
+</body>
+</html>
