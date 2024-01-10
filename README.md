@@ -8,12 +8,12 @@
 1. Clone the repository:
 
 		```bash
-		git clone https://github.com/your-username/flask_brown_bear.git
+		git clone https://github.com/Ertwrx/docker_test.git
 
 2. Navigate to the project directory:
 				
 		```bash
-		cd flask_brown_bear
+		cd docker_test
 
 3. Docker Build and Run
 
