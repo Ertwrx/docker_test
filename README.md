@@ -20,7 +20,7 @@
 ## Build the Docker Image
 
 		```bash
-		docker build -t flask-brown-bear:latest .
+		docker build -t flask_brown_bear:latest .
 		
 ## Run the Docker Container
 
