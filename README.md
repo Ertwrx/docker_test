@@ -31,27 +31,11 @@
 
 
 
-3. Docker Build and Run
+3. Run the Docker Container
 
 
 
-## Build the Docker Image
-
-
-
-		
-
-		docker build -t flask_brown_bear:latest .
-
-		
-
-## Run the Docker Container
-
-
-
-		
-
-		docker run -idt -p 5000:5000 flask_brown_bear:latest
+		docker run -idt -p 5000:5000 docktest:latest
 
 		 
 
